@@ -1,0 +1,7 @@
+﻿div#categories-table {
+    margin: auto;
+}
+
+a.cat-btn-action, button.cat-btn-action {
+    width: 75px;
+}

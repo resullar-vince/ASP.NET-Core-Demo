@@ -1,0 +1,88 @@
+﻿@model Bookbox.Models.Authors.AuthorModel
+
+@{
+    ViewData["Title"] = "Author Details";
+}
+
+<h1>Author Details</h1>
+<hr />
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            @Model.FullName
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="form-group">
+                    <div class="row col-4">
+                        <label asp-for="FirstName" class="control-label font-weight-bold"></label>
+                    </div>
+                    <div class="row col-4">
+                        <span class="control-label">@Model.FirstName</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row col-4">
+                        <label asp-for="LastName" class="control-label font-weight-bold"></label>
+                    </div>
+                    <div class="row col-4">
+                        <span class="control-label">@Model.LastName</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row col-4">
+                        <label asp-for="EmailAddress" class="control-label font-weight-bold"></label>
+                    </div>
+                    <div class="row col-4">
+                        <span class="control-label">@Model.EmailAddress</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row col-4">
+                        <label asp-for="AddedDate" class="control-label font-weight-bold"></label>
+                    </div>
+                    <div class="row col-4">
+                        <span class="control-label">@Model.AddedDate.ToString("MM/dd/yyyy")</span>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="col-12">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="align-middle text-left">Book Title</th>
+                            <th class="align-middle text-left">Published Date</th>
+                            <th class="align-middle text-left">Categories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var book in Model.Books)
+                        {
+                            <tr class="categories-listing-row">
+                                <td class="align-middle text-left">
+                                    <a asp-controller="Books" asp-action="Details" asp-route-id="@book.Id">@book.Title</a>
+                                </td>
+                                <td class="align-middle text-left">@book.PublishedDate</td>
+                                <td class="align-middle text-left">
+                                    @foreach (var category in book.BookCategories)
+                                    {
+                                        <span class="category-span-tag">@category.Category.Name</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

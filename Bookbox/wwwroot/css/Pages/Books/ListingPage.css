@@ -1,0 +1,24 @@
+﻿img.book-listing-image {
+    height: 246px;
+    width: 165px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+td.edit-td {
+    display: flex;
+    flex-direction: column;
+}
+
+a.btn-edit {
+    margin-bottom: 8px;
+}
+
+div.create-button-container {
+    margin: auto;
+    text-align: end;
+}
+
+div.listing-title {
+    text-align: start;
+}

@@ -1,0 +1,9 @@
+D:\Learning\.Net\Exercises\Core MVC\BookboxData\bin\Debug\netstandard2.0\BookboxData.deps.json
+D:\Learning\.Net\Exercises\Core MVC\BookboxData\bin\Debug\netstandard2.0\BookboxData.dll
+D:\Learning\.Net\Exercises\Core MVC\BookboxData\obj\Debug\netstandard2.0\BookboxData.AssemblyInfoInputs.cache
+D:\Learning\.Net\Exercises\Core MVC\BookboxData\obj\Debug\netstandard2.0\BookboxData.AssemblyInfo.cs
+D:\Learning\.Net\Exercises\Core MVC\BookboxData\bin\Debug\netstandard2.0\BookboxData.pdb
+D:\Learning\.Net\Exercises\Core MVC\BookboxData\obj\Debug\netstandard2.0\BookboxData.csproj.CoreCompileInputs.cache
+D:\Learning\.Net\Exercises\Core MVC\BookboxData\obj\Debug\netstandard2.0\BookboxData.dll
+D:\Learning\.Net\Exercises\Core MVC\BookboxData\obj\Debug\netstandard2.0\BookboxData.pdb
+D:\Learning\.Net\Exercises\Core MVC\BookboxData\obj\Debug\netstandard2.0\BookboxData.csprojAssemblyReference.cache

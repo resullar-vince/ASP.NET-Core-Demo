@@ -1,0 +1,10 @@
+﻿div.category-list-cbox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+p.checkbox-label-group {
+    width: 164px;
+}

@@ -1,0 +1,19 @@
+﻿div.details-primary-container {
+    display: flex;
+    flex-direction: row;
+}
+
+dl.details-primary-dl {
+    margin-left: 16px;
+}
+
+img.book-details-image {
+    height: 246px;
+    width: 165px;
+    border-radius: 8px;
+    align-items: flex-start;
+}
+
+div.mini-nav {
+    text-align: end;
+}

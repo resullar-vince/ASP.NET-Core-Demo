@@ -1,0 +1,27 @@
+﻿@model Bookbox.Components.DeleteWarning.DeleteModalProperties
+
+<div id="DeleteModal" class="modal fade" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@Model.ModalTitle</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    ×
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id='DeleteModalContent'>@Model.ModalMessage</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="DeleteConfirmation" class="btn btn-danger button button4">@Model.ModalDeleteLabel</button>
+                <button type="button" id="CancelButton" class="btn btn-secondary button button4">
+                    @Model.ModalCancelLabel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "__AjaxAntiForgeryForm" }))
+{
+    @Html.AntiForgeryToken()
+}

@@ -1,0 +1,56 @@
+﻿@model Bookbox.Models.Books.BookModel
+
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.Title);
+}
+
+<h1>Book Details</h1>
+
+<div class="book-details-card">
+    <h4>@Html.DisplayFor(model => model.Title)</h4>
+    <hr />
+    <div class="details-primary-container">
+        <img class="book-details-image" src="@Html.DisplayFor(model => model.ImageUrl)" alt="@Html.DisplayFor(model => model.Title)" />
+        <dl class="details-primary-dl">
+            <dt>
+                @Html.DisplayNameFor(model => model.AuthorName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AuthorName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd>
+                $@Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PublishedDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PublishedDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CategoryIds)
+            </dt>
+            <dd>
+                @foreach (var category in Model.BookCategories)
+                {
+                    <span>@category.Category.Name</span>
+                }
+            </dd>
+        </dl>
+    </div>
+    <hr />
+    <div class="row">
+        <h5>@Html.DisplayNameFor(model => model.Synopsis)</h5>
+        <br />
+        <p>
+            @Html.DisplayFor(model => model.Synopsis)
+        </p>
+    </div>
+</div>
+<div class="mini-nav">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Back to List</a>
+</div>
